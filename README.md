@@ -27,3 +27,9 @@ I've included a short file that synthesizes the traffic accident data set
 I mentioned in class. Linear regression isn't perfect for this data set, but
 it will get the job done. 
 
+Your submission should include these four files: 
+
+* An R script that creates your synthetic data set.
+* The actual data set in tab or comma separated form. 
+* An RMD file that does the exploratory data analysis. 
+* The knitted HTML file from the RMD. 
