@@ -14,10 +14,10 @@ weekday.coefs <- tibble(weekday=c("M","Tu","W","Th","Fr","Sa","Su"),
                         wd_coef=c(3.5,2,1.5,1.5,4,1,0.5))
 
 weather.coefs <- tibble(weather = c("sunny","rainy","snowy"),
-                        wx_coef = c(0,1,2))
+                        wx_coef = c(-1,1,2))
 
 time.coefs <- tibble(time=c("overnight","morning rush","midday","evening rush"),
-                     t_coef=c(2,0.5,0,1.5))
+                     t_coef=c(2,1,-0.5,1.5))
 
 # Use set.seed to make your results reproducible.
 set.seed(20210218)
@@ -58,3 +58,6 @@ fake.data <- fake.data %>%
 write_tsv(fake.data,"fake_traffic_accident_data.txt")
 
 
+# Who can resist checking the model? 
+summary(lm(accidents_per_10K ~ weather + weekday + time,data=fake.data))
+# Not bad!
