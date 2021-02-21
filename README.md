@@ -33,3 +33,15 @@ Your submission should include these four files:
 * The actual data set in tab or comma separated form. 
 * An RMD file that does the exploratory data analysis. 
 * The knitted HTML file from the RMD. 
+
+Please use the following naming convention for your RMD, HTML, and output:
+
+* lastname_topic.rmd
+* lastname_topic.html
+* lastname_topic.txt or lastname_topic.csv
+
+For instance, if I were doing traffic crashes I'd do: chandler_crash.rmd,
+chandler_crash.html, chandler_crash.txt
+
+
+
