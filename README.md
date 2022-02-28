@@ -8,7 +8,7 @@ This assignment is meant to be relatively fast, but there _is_ a catch. This
 assignment has to be completed within one week, so we can continue working
 with the data you create next week. 
 
-Then I'd like you to create a synthetic data set. This data set 
+I'd like you to create a synthetic data set. This data set 
 should allow someone to use regression to estimate the relationship
 between the variables. Some things that you can include:
 
