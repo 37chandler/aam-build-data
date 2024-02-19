@@ -19,8 +19,8 @@ variables. Some things that you can include:
     error that grows with the value of the data.
 -   Terms in the data set that *don't* influence the response variable.
 
-When you create your relationship between your explantory variables and 
-your response variable, please have at least one continous variable
+When you create your relationship between your explanatory variables and 
+your response variable, please have at least one continuous variable
 and one categorical variable that influence your response. Also include
 at least one variable that doesn't influence the response. 
 
