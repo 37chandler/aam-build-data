@@ -1,3 +1,6 @@
+fake_traffic_accident_data.txt
+.DS_Store
+
 # History files
 .Rhistory
 .Rapp.history

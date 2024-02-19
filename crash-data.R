@@ -12,7 +12,7 @@ library(tidyverse)
 num.rows <- 1000
 
 # Use set.seed to make your results reproducible.
-set.seed(20210218)
+set.seed(20240219)
 
 # Make the data
 fake.data <- tibble(row=1:num.rows)
@@ -24,7 +24,8 @@ fake.data <- fake.data %>%
                           replace=T),
          weather = sample(x=c("sunny","rainy","snowy"),
                           size=num.rows,
-                          replace=T,prob=c(0.5,0.2,0.3)),
+                          replace=T,
+                          prob=c(0.5,0.2,0.3)),
          time = sample(x=c("overnight","morning rush","midday","evening rush"),
                        size=num.rows,
                        replace=T))
@@ -55,6 +56,7 @@ time.coefs <- tibble(time=c("overnight","morning rush","midday","evening rush"),
                      t_coef=c(2,1,-0.5,1.5))
 
 
+ 
 # Join on the coefs
 fake.data <- fake.data %>% 
   left_join(weekday.coefs,by="weekday") %>% 
@@ -110,7 +112,7 @@ fake.data <- fake.data %>%
 fake.data <- fake.data %>% 
   select(-contains("coef"))
 
-write_tsv(fake.data,"fake_traffic_accident_data.txt")
+write_tsv(fake.data %>% select(row:accidents_per_10K_1),"fake_traffic_accident_data.txt")
 
 # Who can resist checking the model? 
 arm::display(lm(accidents_per_10K_1 ~ weather + weekday + time,data=fake.data))
